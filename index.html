@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Seminario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Mi Tienda</h1>
+        <div id="cart-icon">
+            🛒 Carrito (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="form-section">
+            <h2>Agregar Producto</h2>
+            <form id="product-form">
+                <input type="text" id="product-name" placeholder="Nombre del producto" required>
+                <input type="url" id="product-image" placeholder="URL de la imagen" required>
+                <input type="number" id="product-price" placeholder="Precio" required>
+                <select id="product-category" required>
+                    <option value="">Selecciona categoría</option>
+                    <option value="Laptops">Computadoras</option>
+                    <option value="Periféricos">Periféricos</option>
+                    <option value="Monitores">Monitores</option>
+                </select>
+                <button type="submit">Agregar al Catálogo</button>
+            </form>
+        </section>
+
+        <section class="catalog-section">
+            <h2>Catálogo</h2>
+            <div id="catalog-container">
+                <!-- Acá se van a cargar las tarjetas que cree -->
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
