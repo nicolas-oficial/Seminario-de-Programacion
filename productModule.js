@@ -1,5 +1,6 @@
 
 export function crearTarjetaProducto(producto) {
+    
     const card = document.createElement("div");
     card.classList.add("product-card");
 
@@ -21,23 +22,51 @@ export function crearTarjetaProducto(producto) {
 
     const btnCart = document.createElement("button");
     btnCart.textContent = "Agregar al carrito";
-
-    
     btnCart.addEventListener("click", function() {
-        console.log(`¡Producto agregado al carrito: ${producto.nombre}!`);
         alert(`Agregaste "${producto.nombre}" al carrito.`);
-        
-        //  lógica del carrito (cartModule.js)
     });
 
-    // Para armar la tarjeta
+  
+    const btnDelete = document.createElement("button");
+    btnDelete.textContent = "Eliminar";
+    btnDelete.style.backgroundColor = "#dc3545"; // Rojo
+    btnDelete.style.marginTop = "0.5rem";
+
+    btnDelete.addEventListener("click", function() {
+        const confirmar = confirm(`¿Estás seguro de eliminar "${producto.nombre}"?`);
+        if (confirmar) {
+            card.remove(); 
+        }
+    });
+
+
+    const btnEdit = document.createElement("button");
+    btnEdit.textContent = "Editar";
+    btnEdit.style.backgroundColor = "#ffc107"; // Amarillo
+    btnEdit.style.color = "#000";
+    btnEdit.style.marginTop = "0.5rem";
+
+    btnEdit.addEventListener("click", function() {
+        const nuevoNombre = prompt("Ingrese el nuevo título:", producto.nombre);
+        const nuevoPrecio = prompt("Ingrese el nuevo precio:", producto.precio);
+
+        if (nuevoNombre !== null && nuevoPrecio !== null && nuevoNombre.trim() !== "") {
+            producto.nombre = nuevoNombre;
+            producto.precio = nuevoPrecio;
+
+            title.textContent = producto.nombre;
+            price.textContent = `$${producto.precio}`;
+        }
+    });
+
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(category);
     card.appendChild(price);
     card.appendChild(btnCart);
+    card.appendChild(btnEdit);
+    card.appendChild(btnDelete);
 
-    // poner tarjeta en la página
     const catalogContainer = document.getElementById("catalog-container");
     if (catalogContainer) {
         catalogContainer.appendChild(card);

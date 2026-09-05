@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>Mi Tienda</h1>
+        <h1>I - BookShop</h1>
         <div id="cart-icon">
             🛒 Carrito (<span id="cart-count">0</span>)
         </div>
@@ -18,14 +18,21 @@
         <section class="form-section">
             <h2>Agregar Producto</h2>
             <form id="product-form">
-                <input type="text" id="product-name" placeholder="Nombre del producto" required>
+                <input type="text" id="product-name" placeholder="Título del libro" required>
                 <input type="url" id="product-image" placeholder="URL de la imagen" required>
                 <input type="number" id="product-price" placeholder="Precio" required>
                 <select id="product-category" required>
-                    <option value="">Selecciona categoría</option>
-                    <option value="Laptops">Computadoras</option>
-                    <option value="Periféricos">Periféricos</option>
-                    <option value="Monitores">Monitores</option>
+                    <option value="">Seleccione un Género</option>
+                    <option value="Narrativo">Narrativo</option>
+                    <option value="Lírico">Lírico</option>
+                    <option value="Dramático">Dramático</option>
+                    <option value="Didáctico">Didáctico</option>
+                    <option value="Novela">Novela</option>
+                    <option value="Ciencia Ficción">Ciencia Ficción</option>
+                    <option value="Policial">Policial</option>
+                    <option value="Infantil / Juvenil">Infantil / Juvenil</option>
+                    <option value="Historia / Biografía">Historia / Biografía</option>
+                    <option value="Autoayuda / Desarrollo Personal">Autoayuda / Desarrollo Personal</option>
                 </select>
                 <button type="submit">Agregar al Catálogo</button>
             </form>
