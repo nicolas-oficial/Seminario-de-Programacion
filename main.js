@@ -15,7 +15,7 @@ productForm.addEventListener("submit", function(evento) {
     const precio = document.getElementById("product-price").value;
     const categoria = document.getElementById("product-category").value;
 
-    // Creo el objeto con los datos del producto
+    // Creo el objeto con los datos del libro
     const nuevoProducto = {
         nombre: nombre,
         imagen: imagen,

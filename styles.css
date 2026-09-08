@@ -3,11 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
+    background-image: url('imagenes/biblio.jpg');
 }
 
 .header {
-    background: #333;
-    color: white;
+    background: #e3f5c5;
+    color: black;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -63,7 +64,7 @@ body {
     margin-top: 1rem;
 }
 
-/* Estilo para las tarjetas */
+/* Estilos para las tarjetas */
 .product-card {
     background: white;
     border-radius: 8px;
