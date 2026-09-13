@@ -1,3 +1,4 @@
+import { agregarAlCarrito } from "./cartModule.js";
 
 export function crearTarjetaProducto(producto) {
     
@@ -23,7 +24,7 @@ export function crearTarjetaProducto(producto) {
     const btnCart = document.createElement("button");
     btnCart.textContent = "Agregar al carrito";
     btnCart.addEventListener("click", function() {
-        alert(`Agregaste "${producto.nombre}" al carrito.`);
+    agregarAlCarrito(producto);
     });
 
   
