@@ -16,4 +16,3 @@ Tecnologías utilizadas:
 - CSS3
 - JavaScript
 - Git
-- GitHub
