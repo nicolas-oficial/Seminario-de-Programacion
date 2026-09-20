@@ -12,6 +12,14 @@ export function crearTarjetaProducto(producto) {
     const title = document.createElement("h3");
     title.textContent = producto.nombre;
 
+    const author = document.createElement("p");
+    author.textContent = `Autor: ${producto.autor}`;
+    author.style.fontSize = "0.9rem";
+
+    const publisher = document.createElement("p");
+    publisher.textContent = `Editorial: ${producto.editorial}`;
+    publisher.style.fontSize = "0.9rem";
+
     const category = document.createElement("p");
     category.textContent = `Categoría: ${producto.categoria}`;
     category.style.fontSize = "0.9rem";
@@ -49,19 +57,28 @@ export function crearTarjetaProducto(producto) {
 
     btnEdit.addEventListener("click", function() {
         const nuevoNombre = prompt("Ingrese el nuevo título:", producto.nombre);
+        const nuevoAutor = prompt("Ingrese nuevo Autor:", producto.autor);
+        const nuevaEditorial = prompt("Ingrese nueva Editorial:", producto.editorial);
         const nuevoPrecio = prompt("Ingrese el nuevo precio:", producto.precio);
 
-        if (nuevoNombre !== null && nuevoPrecio !== null && nuevoNombre.trim() !== "") {
+        if (nuevoNombre && nuevoAutor && nuevaEditorial && nuevoPrecio) {
             producto.nombre = nuevoNombre;
+            producto.autor = nuevoAutor;
+            producto.editorial = nuevaEditorial;
             producto.precio = nuevoPrecio;
 
             title.textContent = producto.nombre;
+            author.textContent = `Autor: ${producto.autor}`;
+            publisher.textContent = `Editorial: ${producto.editorial}`;
             price.textContent = `$${producto.precio}`;
         }
     });
 
+    // Construcción de la tarjeta
     card.appendChild(img);
     card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(publisher);
     card.appendChild(category);
     card.appendChild(price);
     card.appendChild(btnCart);
