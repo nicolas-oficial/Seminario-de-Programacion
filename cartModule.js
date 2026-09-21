@@ -49,7 +49,7 @@ export function verCarrito() {
         if (numero > 0 && numero <= carrito.length) {
             const eliminado = carrito.splice(numero - 1, 1);
             alert(`Eliminaste "${eliminado[0].nombre}" del carrito.`);
-            actualizarContador(); // Actualiza el número de la barra
+            actualizarContador();
         } else {
             alert("Número no válido.");
         }

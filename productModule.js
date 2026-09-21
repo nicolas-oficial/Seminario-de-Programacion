@@ -1,5 +1,4 @@
 import { agregarAlCarrito } from "./cartModule.js";
-
 export function crearTarjetaProducto(producto) {
     
     const card = document.createElement("div");
@@ -51,7 +50,7 @@ export function crearTarjetaProducto(producto) {
 
     const btnEdit = document.createElement("button");
     btnEdit.textContent = "Editar";
-    btnEdit.style.backgroundColor = "#ffc107"; // Amarillo
+    btnEdit.style.backgroundColor = "#ffc107"; 
     btnEdit.style.color = "#000";
     btnEdit.style.marginTop = "0.5rem";
 
