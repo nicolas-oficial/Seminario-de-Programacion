@@ -37,7 +37,7 @@ export function verCarrito() {
 
     const totalAcumulado = calcularTotal();
     mensaje += `\n-----------------------------------`;
-    mensaje += `\nTOTAL A PAGAR: $${totalAcumulado}`;
+    mensaje += `\nTOTAL A PAGAR: $ ${totalAcumulado}`;
     mensaje += `\n-----------------------------------`;
     mensaje += `\n\nEscribe el NÚMERO del libro que quieras ELIMINAR (o presiona Cancelar):`;
 
