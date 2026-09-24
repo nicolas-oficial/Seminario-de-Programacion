@@ -1,4 +1,5 @@
 import { agregarAlCarrito } from "./cartModule.js";
+
 export function crearTarjetaProducto(producto) {
     
     const card = document.createElement("div");
@@ -37,7 +38,7 @@ export function crearTarjetaProducto(producto) {
   
     const btnDelete = document.createElement("button");
     btnDelete.textContent = "Eliminar";
-    btnDelete.style.backgroundColor = "#dc3545"; // Rojo
+    btnDelete.style.backgroundColor = "#dc3545";
     btnDelete.style.marginTop = "0.5rem";
 
     btnDelete.addEventListener("click", function() {
