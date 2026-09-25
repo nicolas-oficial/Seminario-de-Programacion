@@ -17,7 +17,7 @@ function calcularTotal() {
     let total = 0;
     
     carrito.forEach(function(item) {
-        total += parseFloat(item.precio);
+        total = total + parseFloat(item.precio);
     });
     
     return total.toFixed(2);
